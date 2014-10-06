@@ -1,0 +1,71 @@
+/* --------------------------------------------------
+
+  NAVIGATION
+
+-------------------------------------------------- */
+
+
+
+
+
+/* GENERIC HORIZONTAL LIST NAVIGATION
+================================================== */
+.nav
+  margin 0
+  padding 0
+  list-style-type none
+  clearfix()
+  > li
+    &,
+    > a
+      float left
+
+.nav--block
+  line-height 1
+  letter-spacing -0.31em
+  word-spacing -0.43em
+  white-space nowrap
+  > li
+    padding 0 nav-block-padding
+    letter-spacing normal
+    word-spacing normal
+    > a
+        padding nav-block-padding 0
+
+/* HORIZONTAL PILL NAVIGATION
+================================================== */
+.nav-pills
+  > li
+    > a
+      padding nav-pills-padding
+      text-decoration none
+      color nav-pills-color
+      background nav-pills-background
+      border 3px solid nav-pills-background
+      border-radius nav-pills-radius
+      &:hover
+        border 3px solid nav-pills-border-color
+    + li
+      margin-left 10px
+
+  // Active state
+  .active > a
+    &,
+    &:hover,
+    &:focus
+      color nav-pills-active-color
+      background-color nav-pills-active-background
+      border 3px solid nav-pills-active-background
+
+/* PRIMARY NAVIGATION
+================================================== */
+.nav-primary
+  a
+    font-size 20px
+    font-weight 800
+    font-family avenir
+    text-decoration none
+    color #fff
+    border-bottom 3px solid transparent
+    &:hover
+      border-bottom-color #fff

@@ -1,0 +1,85 @@
+/* --------------------------------------------------
+
+  MIXINS
+
+-------------------------------------------------- */
+
+
+
+
+
+// Mixin: Micro Clearfix
+// Nicolas Gallagher's clearfix hack http://nicolasgallagher.com/micro-clearfix-hack/
+// ex. clearfix()
+clearfix()
+  &:after
+    content: ""
+    display: table
+    clear: both
+  zoom: 1 if support-for-ie
+
+// Alias: group
+// Clearfix with a better name. Excellent for wrangling floats.
+group = clearfix
+
+// Mixin: Vertically Align
+// Cross browser vertical align. Works all the way down to IE9.
+// ex. vertically-align()
+vertically-align()
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+
+// Mixin: Font Size
+// Let's size all our fonts in REMs with px fallbacks for crappy browers
+font-size(font-size)
+  if unit(font-size) == '%'
+    font-size: font-size
+  else
+    font-size: font-size px
+    font-size: (font-size / font-size-base) rem
+
+// Mixin: Placeholder text
+// Change the default color of input placeholder text
+placeholder(color = input-placeholder-color)
+  &::-moz-placeholder
+    color: color // Firefox
+    opacity: 1   // See https://github.com/twbs/bootstrap/pull/11526
+  &:-ms-input-placeholder
+    color: color // Internet Explorer 10+
+  &::-webkit-input-placeholder
+    color: color // Safari and Chrome
+
+// Mixin: Backface visibility
+// Prevent browsers from flickering when using CSS 3D transforms.
+// Default value is `visible`, but can be changed to `hidden`
+backface-visibility(visibility)
+  -webkit-backface-visibility: @visibility
+     -moz-backface-visibility: @visibility
+          backface-visibility: @visibility
+
+// Mixin: Triangle - Borrowed from Axis: https://github.com/jenius/axis
+// One of my favorites. Makes a little css triangle for you. Pass it a direction (up, down, left, right),
+// size (in pixels), and a color.
+// ex. triangle()
+// ex. triangle: down 15px blue
+
+triangle(direction = up, size = 10px, color = #000)
+  width: 0
+  height: 0
+  if direction == up
+    border-left: size solid transparent
+    border-right: size solid transparent
+    border-bottom: size solid color
+  else if direction == down
+    border-left: size solid transparent
+    border-right: size solid transparent
+    border-top: size solid color
+  else if direction == left
+    border-top: size solid transparent
+    border-bottom: size solid transparent
+    border-right: size solid color
+  else if direction == right
+    border-top: size solid transparent
+    border-bottom: size solid transparent
+    border-left: size solid color
