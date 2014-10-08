@@ -1,25 +1,9 @@
 /* Table of Contents
 =====================================================
-  IMPORTS.............Import manifest files
-  GLOBAL STYLES.......Styles that are used sitewide
-  CORE................Default HTML elements
-  COMPONENTS..........
+  CORE................Default elements
+  COMPONENTS..........Building blocks
   TEMPLATES...........Page template styles
 */
-
-/* --------------------------------------------------
-
-  GLOBAL STYLES
-
--------------------------------------------------- */
-@import 'utilities/normalize'
-@import 'utilities/settings'
-@import 'utilities/jeet'
-@import 'utilities/mixins'
-
-
-
-
 
 /* --------------------------------------------------
 
@@ -27,11 +11,14 @@
 
 -------------------------------------------------- */
 @import 'core/base'
+@import 'core/settings'
+@import 'core/jeet'
+@import 'core/rupture'
+@import 'core/mixins'
 @import 'core/typography'
-@import 'core/images'
 // @import 'core/tables'
 // @import 'core/forms'
-@import 'core/buttons'
+// @import 'core/buttons'
 // @import 'core/code'
 
 
@@ -43,10 +30,10 @@
   COMPONENTS
 
 -------------------------------------------------- */
+@import 'components/layout'
 @import 'components/navigation'
 @import 'components/mast'
 @import 'components/hero'
-@import 'components/content'
 @import 'components/footer'
 
 

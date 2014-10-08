@@ -19,13 +19,34 @@
 
 /* THE BASICS
 ================================================== */
+html {
+  -ms-text-size-adjust 100%
+  -webkit-text-size-adjust 100%
+  // -webkit-font-smoothing antialiased
+  // -moz-osx-font-smoothing grayscale
+
 body
+  margin 0
   font-family font-family-base
   font-weight font-weight-base
   font-size font-size-base
   line-height line-height-base
   color text-color
   background-color body-bg
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary
+  display block
 
 h1,h2,h3,h4,h5,h6,
 p,blockquote,pre,
@@ -36,7 +57,22 @@ hr
   margin 0
   padding 0
 
+li
+  display block
+
+h1,
+h2,
+h3,
+h4
+  font-size inherit
+
 a
   text-decoration underline
   color link-color
   transition all .3s ease-in-out
+
+img
+  max-width 100%
+  height auto
+  display block
+  border 0
