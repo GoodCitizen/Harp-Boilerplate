@@ -12,7 +12,7 @@
 ================================================== */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6
-  margin: 0 0 unit((font-size-base * 1.5), px)
+  margin: 0 0 margin-bottom-base
   font-family: headings-font-family
   font-weight: headings-font-weight
 
@@ -37,22 +37,22 @@ h6, .h6
     font-size 75%
 
 h1, .h1
-  font-size unit(h1-size, px)
+  font-size h1-size
 
 h2, .h2
-  font-size unit(h2-size, px)
+  font-size h2-size
 
 h3, .h3
-  font-size unit(h3-size, px)
+  font-size h3-size
 
 h4, .h4
-  font-size unit(h4-size, px)
+  font-size h4-size
 
 h5, .h5
-  font-size unit(h5-size, px)
+  font-size h5-size
 
 h6, .h6
-  font-size unit(h6-size, px)
+  font-size h6-size
 
 
 
@@ -61,7 +61,8 @@ h6, .h6
 /* PARAGRAPHS
 ================================================== */
 p
-  margin: 0 0 unit((font-size-base * 1.5), px) // Might need to come back and adjust this during development ;)
+  font-size
+  margin: 0 0 margin-bottom-base
 
 
 
@@ -73,7 +74,7 @@ p
 ul,
 ol
   margin-top: 0
-  margin-bottom: unit((font-size-base * 1.5), px)
+  margin-bottom: margin-bottom-base
   ul,
   ol
     margin-bottom: 0
@@ -87,7 +88,7 @@ list-unstyled()
 // Definition lists
 dl
   margin-top: 0 // Remove browser default
-  margin-bottom: unit((font-size-base * 1.5), px)
+  margin-bottom: margin-bottom-base
 
 dt,
 dd
